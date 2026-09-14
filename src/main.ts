@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
   const form = document.getElementById("form") as HTMLFormElement;
   const nameInput = document.getElementById("name") as HTMLInputElement;
   const container = document.getElementById("cards") as HTMLDivElement;
+  const exportButton = document.getElementById("export") as HTMLButtonElement;
+  const csv = document.getElementById("csv") as HTMLTextAreaElement;
+  csv.value = "";
   const ratties: ElectricRat[] = [];
 
   form.addEventListener("submit", (e)=>{
@@ -34,4 +37,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
       }
     }
   })
+  exportButton.addEventListener("click", () => {
+  let text = "name;atk;hp\n";
+
+  for (const rat of ratties) {
+    text += rat.toCSV() + "\n";
+  }
+  csv.value = text;
+})
 })

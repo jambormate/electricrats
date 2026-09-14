@@ -41,3 +41,15 @@ body{
 .card p{
   font-size: large;
 }
+#export{
+  display: block;
+  margin: 30px;
+  font-size: large;
+}
+
+#csv{
+  display: block;
+  width: 80%;
+  max-width: 250px;
+  font-size: medium;
+}

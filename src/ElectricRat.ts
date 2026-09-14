@@ -19,4 +19,7 @@ export class ElectricRat{
       throw new Error("Az ATK pozitív egész szám kell legyen");
     }
   }
+  public toCSV(): string {
+    return this.name + ";" + this.atk + ";" + this.hp;
+  }
 }
