@@ -44,7 +44,7 @@ body{
 }
 #export{
   display: block;
-  margin: 30px;
+  margin: -10px;
   font-size: large;
 }
 
@@ -53,6 +53,18 @@ body{
   width: 80%;
   max-width: 250px;
   font-size: medium;
+}
+#export{
+  display: block;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 10px 20px;
+  font-size: large;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {

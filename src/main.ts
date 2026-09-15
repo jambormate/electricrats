@@ -36,9 +36,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
         alert(error.message);
       }
     }
+    document.getElementById("export")!.style.display = "block";
   })
   exportButton.addEventListener("click", () => {
   let text = "name;atk;hp\n";
+  document.getElementById("csv")!.style.display = "block";
 
   for (const rat of ratties) {
     text += rat.toCSV() + "\n";
